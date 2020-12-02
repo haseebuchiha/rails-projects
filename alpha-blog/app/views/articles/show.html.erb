@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>broda</title>
-</head>
-<body>
-    <h1>LULU JUCIE</h1>
-    <p><strong>Title: <%=@article.title%></strong></p>
-    <p><strong>Description: <%=@article.description%></strong></p>
-</body>
-</html>
+<h1>Showing article details</h1>
+
+<p><strong>Title: </strong><%= @article.title %></p>
+<p><strong>Description: </strong><%= @article.description %></p>
+
+<%= link_to 'Edit', edit_article_path(@article) %> |
+<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to 'Return to articles listing', articles_path %>
